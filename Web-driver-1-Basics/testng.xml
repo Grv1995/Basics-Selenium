@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="First Suite" verbose="1" thread-count="5">
+	
+	<test name= "testng.tests" parallel="true">
+	<packages>
+		<package name = "First_selenium.TestNg.*"></package>
+	</packages>
+	</test>
+	
+	<test name="ChromeBrowserSpecificTest">
+	<classes>
+	<class name ="First_selenium.TestNg.MultipleBrowserTest">
+	<parameter name="browser" value="Chrome"></parameter>
+	</class>
+	</classes>	
+	</test>
+	
+	<test name="FirefoxBrowserSpecificTest">
+	<classes>
+	<class name ="First_selenium.TestNg.MultipleBrowserTest">
+	<parameter name="browser" value="Firefox"></parameter>
+	</class>
+	</classes>	
+	</test>
+	
+</suite>
